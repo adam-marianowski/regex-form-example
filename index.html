@@ -1,0 +1,84 @@
+<!doctype html>
+<html data-bs-theme="dark">
+	<head>
+		<meta charset="utf-8" />
+		<title>Regex form</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body class="p-4">
+		<h1 class="text-center">Signup</h1>
+
+		<form class="p-4 d-flex flex-column w-50 mx-auto">
+			<input
+				type="text"
+				name="username"
+				placeholder="username"
+				class="form-control mb-3"
+			/>
+			<input
+				type="text"
+				name="email"
+				placeholder="email"
+				class="form-control mb-3"
+			/>
+			<input
+				type="password"
+				id="password"
+				name="password"
+				placeholder="password"
+				class="form-control"
+			/>
+			<button
+				type="button"
+				class="mb-3 btn btn-outline-primary small align-self-end mt-2"
+				id="toggle-password"
+			>
+				show password
+			</button>
+			<input
+				type="text"
+				name="telephone"
+				placeholder="telephone"
+				class="form-control mb-3 mt-3"
+			/>
+			<input
+				type="text"
+				name="slug"
+				placeholder="slug"
+				class="form-control mb-3"
+			/>
+
+			<p id="username-error" class="alert alert-danger">
+				username must be between 5-12 characters
+			</p>
+			<p id="email-error" class="alert alert-danger">
+				email must be a valid email address (exampl@mail.com)
+			</p>
+			<p id="password-error" class="alert alert-danger">
+				password must be alphanumeric (@, _ and - are allowed) and must be 8-20
+				characters
+			</p>
+			<p id="telephone-error" class="alert alert-danger">
+				tel must be valid UK phone number (11 digits)
+			</p>
+			<p id="slug-error" class="alert alert-danger">
+				slug must be lowercase letters, numbers or hyphens between 8-20
+			</p>
+
+			<button class="btn btn-outline-success align-self-end">Submit</button>
+		</form>
+
+		<script src="validation.js"></script>
+	</body>
+</html>
